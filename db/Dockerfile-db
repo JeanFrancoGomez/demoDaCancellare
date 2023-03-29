@@ -1,0 +1,7 @@
+FROM postgres:latest
+WORKDIR /db
+ENV POSTGRES_USER admin
+ENV POSTGRES_PASSWORD password
+ENV POSTGRES_DB my-db-test
+COPY init.sql init.sql
+#RUN chmod 777 ./*.sh

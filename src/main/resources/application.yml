@@ -1,0 +1,50 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name: spring-blog
+    description: Demo project with Spring Framework.
+    author: Jean Franco Gomez
+    version: '@project.version@'
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/my-db-test
+    username: admin
+    password: password
+  jpa:
+    properties:
+      jakarta:
+        persistence:
+          schema-generation:
+            database:
+              action: update
+
+#spring:
+#  version: 3.0.2
+#  application:
+#    name: test-mca
+#    version: 0.0.1
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/some-postgres
+#    username: sa
+#    password: password
+#  datasource:
+#    url: jdbc:h2:mem:mydb
+#    username: sa
+#    password: password
+#    driverClassName: org.h2.Driver
+#  jpa:
+#    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2
